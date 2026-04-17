@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahavej Gaus Khadke | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --soft: #eff6ff;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffffff, #eef4ff);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      line-height: 1.1;
+      margin-bottom: 7px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+    }
+
+    .profile-box {
+      height: 350px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe, #eff6ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .quick-info {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-info div {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    .section-subtext {
+      color: var(--muted);
+      max-width:900px;
+      margin-bottom: 34px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: var(--soft);
+      color: var(--accent);
+      border: 1px solid #dbeafe;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 40px 0 60px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Shahavej Gaus Khadke</h1>
+        <h2>BTech Data Science Student | Aspiring Developer | Problem Solver</h2>
+        <p>
+          I am a Data Science student with a growing interest in software development,
+          practical problem-solving, technology, and user-focused digital solutions. I enjoy
+          learning coding, exploring hardware knowledge, and building academic and personal
+          projects that connect technology with real-world challenges.
+        </p>
+        <div class="buttons">
+          <a href="#about" class="btn btn">About Me</a>
+          <a href="#skills" class="btn btn">Skills</a>
+          <a href="#projects" class="btn btn">Projects</a>
+          <a href="#contact" class="btn btn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile-box">
+          <img src="C:\Users\Student\Desktop\sha\ss.jpg" class="profile-image"/>
+        </div>
+        <div class="quick-info">
+          <div><strong>Focus:</strong> Software Development, Problem Solving, Web Design</div>
+          <div><strong>Current Role:</strong> BTech DS Student</div>
+          <div><strong>Location:</strong> India</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtext">
+        I am passionate about understanding computers, creating useful digital solutions,
+        and presenting ideas in a clear and impactful way. My academic interest includes
+        programming, Video game designs and Real world Problem solving. I am continuously improving both my technical and presentation skills.
+      </p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Education</h3>
+          <p>
+            Bachelor of Technology (BTech) in Data Science.<br />
+            Currently pursuing graduation in <a href="https://mitaoe.ac.in/">MITAOE</a> with interest in development and technical learning.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Strengths</h3>
+          <p>
+            Curious learner, Analytical thinker, Interested in
+            practical solutions, and always working to improve technical understanding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtext">
+        A combination of technical, academic, and problem-solving skills developed through study, practice, and project work.</p>
+      <div class="card">
+        <div class="skill-list">
+          <span class="skill">C Programming</span>
+          <span class="skill">Python</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Problem Solving</span>
+          <span class="skill">Basic Hardware Knowledge</span>
+          <span class="skill">Presntation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtext">
+        A few academic and personal works that reflect my interests in software, design thinking, and practical technology solutions.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Public Transportation Project</h3>
+          <p>
+            Developed a website to manage the Transportation System Showing Timings of buses, live Locations of buses, etc.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>
+            Developed a personal portfolio website to present profile, skills, education, and projects in a structured, professional, and modern digital format.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Tours and Travels Management System</h3>
+          <p>
+            Prepared a System to manage a Tours and Travels company By the help of LINUX Operating System.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Accident detection and Alarm System</h3>
+          <p>
+            Developed a Hardware to Detect the Accident of the vehicles and send the signals seeking for emergency help.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="container">
+      <h2 class="section-title">Interests</h2>
+      <div class="grid grid-3">
+        <div class="card"><h3>Software Development</h3><p>Learning and building useful digital solutions.</p></div>
+        <div class="card"><h3>Web Design</h3><p>Creating clean and professional user-facing layouts.</p></div>
+        <div class="card"><h3>Computer Hardware</h3><p>Exploring systems, components, and performance understanding.</p></div>
+        <div class="card"><h3>Game Designs</h3><p>Building and to work on Video Games</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="card contact-box">
+        <p><strong>Name:</strong> Shahavej Gaus Khadke</p>
+        <p><strong>Role:</strong> BTech DS Student</p>
+        <p><strong>Location:</strong> India</p>
+        <p><strong>Email:</strong> shahavejkhadke14@gmail.com</p> 
+        <p><strong>Mobile Number:</strong> 7620863312</p>       
+        <p><strong>GitHub:</strong> </p>
+        <p><strong>LinkedIn:</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Shahavej Gaus Khadke. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
